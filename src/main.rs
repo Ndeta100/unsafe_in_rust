@@ -1,3 +1,7 @@
+use std::cmp::Ordering;
+
 fn main() {
-    println!("Hello, world!");
+    unsafe trait UnsafeOrd {
+        fn cmp(&self, other: &Self) -> Ordering;
+    }
 }
